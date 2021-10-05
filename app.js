@@ -50,6 +50,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function dragEnd() {
         console.log(this.id, 'dragEnd')
+        let validMoves = [
+            squareIdBeingDragged - 1, 
+            squareIdBeingDragged - width, 
+            squareIdBeingDragged + width, 
+            squareIdBeingDragged + width, 
+        ]
+
+        let validMove = validMoves.includes(squareIdBeingReplaced)
+
+        if (squareIdBeingReplaced && validMove) {
+            squareIdBeingReplaced = null
+        } else if (squareIdBeingReplaced && !validMove) {
+            squares[squareIdBeingReplaced].style.backgroundColor = colorBeingReplaced;
+            squares[squaresIdBeingDragged].style.backgroundColor = colorBeingDragged;
+        } else squares[squareIdBeingDragged].style.backgroundColor = colorBeingDragged;
     }
 
     function dragOver(e) {
@@ -70,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(this.id, 'dragDrop')
         colorBeingReplaced = this.style.backgroundColor
         sqaureIdBeingReplaced = parseInt(this.id)
+        this.style.backgroundColor = colorBeingDragged;
         squares[squareIdBeingDragged].style.backgroundColor = colorBeingReplaced
     }
 
