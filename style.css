@@ -1,5 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 body {
+    font-family: Helvetica, Arial, sans-serif;
     background-image: url("images/candy-crush-background-2.png");
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    color: white;
+}
+
+.title {
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    margin: 30px;
+    text-transform: uppercase;
+    font-size: 56px;
+    color: rgba(0, 0, 0, 0.822);
+}
+
+.score-board {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) inset, 0 1px 0 #fff;
+    border-radius: 10px;
+    padding: 5px 30px;
+    text-align: center;
+    background-color: rgba(108, 126, 150, 0.65);
+}
+
+.score-board h3 {
+    color: white;
+    font-variant: small-caps;
+    font-size: 28px;
+    margin: 16px 0 0 0;
+}
+
+#score {
+    font-size: 38px;
+    margin: 14px 0 16px 0;
 }
 
 .grid {
@@ -7,9 +46,35 @@ body {
     width: 560px;
     display: flex;
     flex-wrap: wrap;
+    background-color: rgba(108, 126, 150, 0.5);
+    padding:5px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) inset, 0 1px 0 #fff;
 }
 
 .grid div {
     height: 70px;
     width: 70px;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.socials a {
+    color: rgb(41, 41, 245);
+    margin: 6px 0;
+    text-decoration: none;
+}
+
+.socials p{
+    margin: 16px 0;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
