@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Checking for matches 
     function checkRowForFive() {
-        for (i = 0; i < 61; i++) {
+        for (i = 0; i < 59; i++) {
             let rowOfFive = [i, i+1, i+2, i+3, i+4]
             let decidedColor = squares[i].style.backgroundImage
             const isBlank = squares[i].style.backgroundImage === ''
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
     checkRowForFive()
 
     function checkColumnForFive() {
-        for (i = 0; i < 47; i++) {
+        for (i = 0; i < 31; i++) {
             let columnOfFive = [i, i+width, i+width*2, i+width*3, i+width*4]
             let decidedColor = squares[i].style.backgroundColor
             const isBlank = squares[i].style.backgroundColor === ''
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
     checkColumnForFive()
 
     function checkRowForFour() {
-        for (i = 0; i < 61; i++) {
+        for (i = 0; i < 60; i++) {
             let rowOfFour = [i, i+1, i+2, i+3]
             let decidedColor = squares[i].style.backgroundImage
             const isBlank = squares[i].style.backgroundImage === ''
@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
     checkRowForFour()
 
     function checkColumnForFour() {
-        for (i = 0; i < 47; i++) {
+        for (i = 0; i < 39; i++) {
             let columnOfFour = [i, i+width, i+width*2, i+width*3]
             let decidedColor = squares[i].style.backgroundImage
             const isBlank = squares[i].style.backgroundImage === ''
